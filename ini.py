@@ -1,0 +1,9 @@
+from utils import load_sql,Converter_PdfTexttoText,Converter_PdfTexttoText_2ver,load_xlsx_kollok7
+
+load_sql.execute_query('utils/sql/20240926_create_school_table.sql','create_school_table')
+load_sql.execute_query('utils/sql/20240926_create_test_obstetrics_and_gynecology_2022_table.sql','create_test_obstetrics_and_gynecology_2022_table')
+Converter_PdfTexttoText.convert()
+Converter_PdfTexttoText_2ver.convert()
+load_sql.execute_query('utils/sql/20240926_update_test_obstetrics_and_gynecology_2022_table.sql','update_test_obstetrics_and_gynecology_2022_table')
+load_sql.execute_query('utils/sql/20240926_create_Anatomy_kollok7_table.sql','create_Anatomy_kollok7_table')
+load_xlsx_kollok7.load_xlsx_kollok7()
