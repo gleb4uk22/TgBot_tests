@@ -78,7 +78,7 @@ def convert():
             print(q)
             print("question work " + str(qnum))
             client.execute(
-                'INSERT INTO test_obstetrics_and_gynecology_2022 (questionNum,question,a,b,c,d) VALUES',
+                'INSERT INTO TgBot_tests.test_obstetrics_and_gynecology_2022 (questionNum,question,a,b,c,d) VALUES',
                 [{
                     'questionNum': int(qnum),
                     'question': q,

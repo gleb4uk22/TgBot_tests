@@ -1,4 +1,4 @@
-CREATE OR REPLACE TABLE Anatomy_kollok7
+CREATE OR REPLACE TABLE TgBot_tests.Anatomy_kollok7
 (
     num_q Int64	            -- номер вопроса
 	, correct boolean	    -- корректный или нет

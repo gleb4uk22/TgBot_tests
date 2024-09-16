@@ -138,7 +138,7 @@ def convert():
              #client.command(f"INSERT INTO test_obstetrics_and_gynecology_2022 (questionNum,question,a,b,c,d) Select {qnum}, {q}, {p1}, {p2}, {p3}, {p4}")
              #client.command(f'INSERT INTO test_obstetrics_and_gynecology_2022 (questionNum,question,a,b,c,d) Select {qnum}, 2, 1, {p1},1, 1')
             client2.execute(
-                'INSERT INTO test_obstetrics_and_gynecology_2022 (questionNum,question,a,b,c,d) VALUES',
+                'INSERT INTO TgBot_tests.test_obstetrics_and_gynecology_2022 (questionNum,question,a,b,c,d) VALUES',
                 [{
                     'questionNum'   : int(qnum),
                     'question'      : q,

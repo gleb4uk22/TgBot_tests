@@ -1,4 +1,4 @@
-CREATE OR REPLACE TABLE school
+CREATE OR REPLACE TABLE TgBot_tests.school
 (
     a Int64	-- множ a
 	, b Int64	-- множ b
@@ -12,7 +12,7 @@ ENGINE = MergeTree()
 ORDER BY id
 ;
 
-INSERT INTO school (a,b,c,id,wrong1,wrong2,wrong3)
+INSERT INTO TgBot_tests.school (a,b,c,id,wrong1,wrong2,wrong3)
 WITH
     arrayMap(i -> (0 + i)),
     range(11) AS Num,

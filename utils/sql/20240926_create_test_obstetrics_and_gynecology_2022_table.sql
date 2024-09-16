@@ -1,4 +1,4 @@
-CREATE OR REPLACE TABLE test_obstetrics_and_gynecology_2022
+CREATE OR REPLACE TABLE TgBot_tests.test_obstetrics_and_gynecology_2022
 (
     questionNum			Int64			-- номер вопроса
 	, question 			Varchar(1024)	-- вопрос

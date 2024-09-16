@@ -26,7 +26,7 @@ def load_xlsx_kollok7():
         #print('num_a = ' + str(df.loc[i]['num_a']))
 
         client2.execute(
-            'INSERT INTO Anatomy_kollok7 (num_q,correct,name,what,num_a) VALUES',
+            'INSERT INTO TgBot_tests.Anatomy_kollok7 (num_q,correct,name,what,num_a) VALUES',
             [{
                 'num_q':  num_q, #int(df.loc[i]['num_q']),
                 'correct': df.loc[i]['correct'],

@@ -47,7 +47,7 @@ ONE, TWO, THREE, FOUR = range(4)
 async def quizMed(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     logger.info("Пользователь %s работает с test_obstetrics_and_gynecology_2022", update.effective_chat.username)
     # возьмем выборку
-    result = client.query('SELECT * from test_obstetrics_and_gynecology_2022 order by rand() limit 1')
+    result = client.query('SELECT * from TgBot_tests.test_obstetrics_and_gynecology_2022 order by rand() limit 1')
     # блок для определения рандомом массива
     randanswer = random.sample(range(2, 6), 4)
     # блок чтобы найти корректный ответ
@@ -82,10 +82,10 @@ async def quizMed(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 async def quizMed2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     logger.info("Пользователь %s работает с Anatomy_kollok7", update.effective_chat.username)
-    question = client.query(r"SELECT num_q,name from Anatomy_kollok7 where what = 'q' order by rand() limit 1")
+    question = client.query(r"SELECT num_q,name from TgBot_tests.Anatomy_kollok7 where what = 'q' order by rand() limit 1")
     questions = question.result_rows[0][1] #q_name 2 column
     num_q = question.result_rows[0][0]
-    randanswers = client.query(r"SELECT name,correct from Anatomy_kollok7 where what = 'a' and num_q = '%i' order by rand()",{num_q})
+    randanswers = client.query(r"SELECT name,correct from TgBot_tests.Anatomy_kollok7 where what = 'a' and num_q = '%i' order by rand()",{num_q})
     #print(randanswers.result_rows)
     #print(randanswers.result_rows[0][1])
     # возьмем выборку
@@ -131,10 +131,10 @@ async def quizMed2(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
 async def quizMed2_old(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    question = client.query(r"SELECT num_q,name from Anatomy_kollok7 where what = 'q' order by rand() limit 1")
+    question = client.query(r"SELECT num_q,name from TgBot_tests.Anatomy_kollok7 where what = 'q' order by rand() limit 1")
     questions = question.result_rows[0][1] #q_name 2 column
     num_q = question.result_rows[0][0]
-    randanswers = client.query(r"SELECT name,correct from Anatomy_kollok7 where what = 'a' and num_q = '%i' order by rand()",{num_q})
+    randanswers = client.query(r"SELECT name,correct from TgBot_tests.Anatomy_kollok7 where what = 'a' and num_q = '%i' order by rand()",{num_q})
     print(randanswers.result_rows)
     print(randanswers.result_rows[0][1])
     # возьмем выборку
@@ -178,7 +178,7 @@ async def quizMed2_old(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 async def quizSchool(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     logger.info("Пользователь %s работает с quizSchool", update.effective_chat.username)
     # возьмем выборку
-    result = client.query('SELECT * from school order by rand() limit 1')
+    result = client.query('SELECT * from TgBot_tests.school order by rand() limit 1')
     # блок для определения рандомом массива
     randanswer = random.sample(range(2, 6), 4)
     # блок чтобы найти корректный ответ
