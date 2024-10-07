@@ -1,1 +1,1 @@
-Telegram Bot tests knowledge (RU)
+Telegram Bot tests knowledge
